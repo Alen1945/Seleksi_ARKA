@@ -2,9 +2,10 @@
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
+from AppCrud.views import ListProductView
 
 urlpatterns = [
-    path('',TemplateView.as_view(template_name='index.html'),name='home'),
+    path('',ListProductView.as_view(),name='home'),
     path('admin/', admin.site.urls),
 ]
 

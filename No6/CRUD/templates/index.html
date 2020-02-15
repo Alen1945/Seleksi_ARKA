@@ -1,5 +1,38 @@
 {% extends "base.html" %}
 
+
 {% block maincontent %}
-	<h1>Hello</h1>
+<div class="row mt-5 mb-2 pb-2 border-bottom border-primary">
+	
+	<table class="table">
+	  <thead>
+	    <tr>
+	      <th scope="col">No</th>
+	      <th scope="col">Cashier</th>
+		  <th scope="col">Product</th>
+		  <th scope="col">Category</th>
+	      <th scope="col">Price</th>
+	      <th scope="col">Action</th>
+	    </tr>
+	  </thead>
+	  <tbody>
+			{% for p in product  %}
+				<tr>
+				<th scope="row">{{forloop.counter}}</th>
+				<td>{{p.cashier.name}}</td>
+				<td>{{p.name}}</td>
+				<td>{{p.category.name}}</td>
+				<td>{{p.price}}</td>
+				<td>
+					<a href="#" class="btn btn-warning">Ubah</a>
+				</td>
+					<td>
+					<a href="#" class="btn btn-danger">Hapus</a>
+				</td>
+				</tr>
+			{% endfor %}
+	  </tbody>
+	</table>
+	</div>
+	
 {% endblock maincontent %}
