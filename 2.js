@@ -18,5 +18,5 @@ console.log(is_username_valid('alenselly'))
 
 console.log("======= cek password =======")
 console.log(is_password_valid('123alenadf'))
-console.log(is_password_valid('A#alen124'))
+console.log(is_password_valid('T3pungB#3r4s!'))
 
