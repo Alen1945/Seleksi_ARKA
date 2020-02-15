@@ -24,7 +24,7 @@
 				<td>{{p.category.name}}</td>
 				<td>{{p.price}}</td>
 				<td>
-					<a href="#" class="btn btn-warning">Ubah</a>
+					<a href="#"  data_id={{p.id}} class="btn btn-warning editButton">Ubah</a>
 					<a href="#" class="btn btn-danger ml-1">Hapus</a>
 				</td>
 				</tr>
@@ -55,7 +55,7 @@
 		</div>
 	
 	<!-- Modal Change -->
-	<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModal" aria-hidden="true">
+	<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModal" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 				<div class="modal-header">
@@ -65,10 +65,10 @@
 					</button>
 				</div>
 				<div class="modal-body">
-					<form method="post" action=>
+					<form id="editForm" method="post">
 						{% csrf_token %}
 						<div id="dataChange">
-
+							'ksj'
 						</div>
 						<button type="submit" class="m-0 ml-auto btn btn-primary">Save changes</button>
 					</form>
@@ -78,3 +78,27 @@
 			</div>
 	
 {% endblock maincontent %}
+
+{% block costum_js %}
+	<script type="text/javascript">
+		$(document).ready(function(e){
+			$('.editButton').on('click',function(e){
+				e.preventDefault()
+				let id=$(this).attr('data_id')
+				console.log(id)
+				$.ajax({
+					url : "product/"+id+'/',
+					type : "GET",
+					success : function(data) {
+						$('#dataChange').html(data)
+						$('#editForm').attr('action', '/ubah/'+id+'/')
+						$('#editModal').modal('show')
+					},   
+					error : function(err) {
+						console.log(err)
+					}
+				})
+			})
+		});
+	</script>
+{% endblock costum_js %}
