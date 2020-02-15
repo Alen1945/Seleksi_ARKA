@@ -65,5 +65,10 @@ Aplikasi Web ini menggunakan Framework Django dan Python versi 3
 
 
 ##### Edit data
-
 ![4](readMe.source/4.png)
+![5](readMe.source/5.png)
+
+##### Hapus data
+clik hapus untuk menghapus
+![6](readMe.source/6.png)
+![7](readMe.source/7.png)
