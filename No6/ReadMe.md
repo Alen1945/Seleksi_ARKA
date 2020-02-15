@@ -54,16 +54,16 @@ Aplikasi Web ini menggunakan Framework Django dan Python versi 3
 
 ##### Contoh Data
 
-![1](/home/alen/tes_arkademy/No6/CRUD/readMe.source/1.png)
+![1](readMe.source/1.png)
 
 ##### Tambah data
 
-![2](/home/alen/tes_arkademy/No6/CRUD/readMe.source/2.png)
+![2](readMe.source/2.png)
 
-![3](/home/alen/tes_arkademy/No6/CRUD/readMe.source/3.png)
+![3](readMe.source/3.png)
 
 
 
 ##### Edit data
 
-![4](/home/alen/tes_arkademy/No6/CRUD/readMe.source/4.png)
+![4](readMe.source/4.png)
