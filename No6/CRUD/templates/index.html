@@ -25,7 +25,7 @@
 				<td>{{p.price}}</td>
 				<td>
 					<a href="#"  data_id={{p.id}} class="btn btn-warning editButton">Ubah</a>
-					<a href="#" class="btn btn-danger ml-1">Hapus</a>
+					<a href="{% url "hapus" p.id %}"  class="btn btn-danger ml-1" >Hapus</a>
 				</td>
 				</tr>
 			{% endfor %}

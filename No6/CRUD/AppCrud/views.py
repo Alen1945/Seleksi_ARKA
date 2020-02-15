@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from django.views.generic import View,RedirectView
+from django.views.generic import View
 from .models import Product
 from .forms import CreateProductForm
 from django.http import JsonResponse
@@ -38,4 +38,10 @@ def getData(request,**kwargs):
 	else:
 		return False
 		
-
+def hapusData(request,**kwargs):
+	data=Product.objects.get(id=kwargs['id_product'])
+	if data:
+		data.delete()
+		return redirect('home')
+	else:
+		return False
